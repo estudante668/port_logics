@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/hadware_mao/Not_Port.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/hadware_mao/db/Not_Port.cbx.xml
+design_name = Not_Port
+instance = comp, \s~output\, s~output, Not_Port, 1
+instance = comp, \a~input\, a~input, Not_Port, 1

@@ -1,0 +1,10 @@
+entity nand_port is 
+port(
+ a,b : in Bit;
+ s   : out Bit
+);
+end nand_port
+architecture main of nand_port 
+begin
+S <= a Nand b;
+end 
