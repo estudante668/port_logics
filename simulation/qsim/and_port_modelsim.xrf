@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/hadware_mao/and_port.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/hadware_mao/db/and_port.cbx.xml
+design_name = and_port
+instance = comp, \s~output , s~output, and_port, 1
+instance = comp, \a~input , a~input, and_port, 1
+instance = comp, \b~input , b~input, and_port, 1
+instance = comp, \s~0 , s~0, and_port, 1

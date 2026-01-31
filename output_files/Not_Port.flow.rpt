@@ -1,5 +1,5 @@
 Flow report for Not_Port
-Sat Jan 31 06:15:40 2026
+Sat Jan 31 14:25:59 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jan 31 06:15:40 2026       ;
+; Flow Status                     ; Successful - Sat Jan 31 14:25:59 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Not_Port                                    ;
 ; Top-level Entity Name           ; Not_Port                                    ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/31/2026 06:13:42 ;
+; Start date & time ; 01/31/2026 14:25:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Not_Port            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167690714441955.176985082208048        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167690714441955.176988033611716        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,10 +93,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4854 MB             ; 00:00:31                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4715 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4854 MB             ; 00:00:31                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,8 +104,6 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; fabricio         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; fabricio         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; fabricio         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -115,8 +111,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Not_Port -c Not_Port
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Not_Port -c Not_Port --vector_source=C:/hadware_mao/Waveform.vwf --testbench_file=C:/hadware_mao/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/hadware_mao/simulation/qsim/ Not_Port -c Not_Port
 
 
 

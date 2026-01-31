@@ -1,44 +1,33 @@
-# do Not_Port.do
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:15:51 on Jan 31,2026
-# vcom -work work Not_Port.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package altera_lnsim_components
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cyclonev_atom_pack
-# -- Loading package cyclonev_components
-# -- Compiling entity Not_Port
-# -- Compiling architecture structure of Not_Port
-# End time: 06:15:52 on Jan 31,2026, Elapsed time: 0:00:01
+# do and_port.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:36:54 on Jan 31,2026
+# vlog -work work and_port.vo 
+# -- Compiling module and_port
+# ** Warning: and_port.vo(31): (vlog-13233) Design unit "and_port" already exists and will be overwritten. Overwriting a VHDL entity with a Verilog module.
+# 
+# Top level modules:
+# 	and_port
+# End time: 14:36:54 on Jan 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:36:54 on Jan 31,2026
+# vlog -work work Waveform1.vwf.vt 
+# -- Compiling module and_port_vlg_vec_tst
+# 
+# Top level modules:
+# 	and_port_vlg_vec_tst
+# End time: 14:36:54 on Jan 31,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:15:52 on Jan 31,2026
-# vcom -work work Waveform.vwf.vht 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Not_Port_vhd_vec_tst
-# -- Compiling architecture Not_Port_arch of Not_Port_vhd_vec_tst
-# End time: 06:15:52 on Jan 31,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Not_Port_vhd_vec_tst 
-# Start time: 06:15:56 on Jan 31,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.not_port_vhd_vec_tst(not_port_arch)
-# Loading altera_lnsim.altera_lnsim_components
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cyclonev.cyclonev_atom_pack(body)
-# Loading cyclonev.cyclonev_components
-# Loading work.not_port(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading cyclonev.cyclonev_io_obuf(arch)
-# Loading cyclonev.cyclonev_io_ibuf(arch)
-# after#30
-# End time: 06:15:57 on Jan 31,2026, Elapsed time: 0:00:01
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.and_port_vlg_vec_tst 
+# Start time: 14:36:54 on Jan 31,2026
+# Loading work.and_port_vlg_vec_tst
+# Loading work.and_port
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# after#26
+# ** Note: $finish    : Waveform1.vwf.vt(46)
+#    Time: 1 us  Iteration: 0  Instance: /and_port_vlg_vec_tst
+# End time: 14:36:55 on Jan 31,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
