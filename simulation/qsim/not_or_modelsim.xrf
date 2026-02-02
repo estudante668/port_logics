@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/hadware_mao/not_or.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/hadware_mao/db/not_or.cbx.xml
+design_name = not_or
+instance = comp, \s~output , s~output, not_or, 1
+instance = comp, \a~input , a~input, not_or, 1
+instance = comp, \b~input , b~input, not_or, 1
+instance = comp, \s~0 , s~0, not_or, 1
