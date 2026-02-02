@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "01/31/2026 14:36:09"
+-- DATE "02/02/2026 14:02:50"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -29,17 +29,15 @@
 LIBRARY ALTERA_LNSIM;
 LIBRARY CYCLONEV;
 LIBRARY IEEE;
-LIBRARY STD;
 USE ALTERA_LNSIM.ALTERA_LNSIM_COMPONENTS.ALL;
 USE CYCLONEV.CYCLONEV_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE STD.STANDARD.ALL;
 
 ENTITY 	and_port IS
     PORT (
 	a : IN std_logic;
 	b : IN std_logic;
-	s : OUT STD.STANDARD.bit
+	s : BUFFER std_logic
 	);
 END and_port;
 
@@ -67,7 +65,7 @@ BEGIN
 
 ww_a <= a;
 ww_b <= b;
-s <= IEEE.STD_LOGIC_1164.TO_BIT(ww_s);
+s <= ww_s;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;

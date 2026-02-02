@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/hadware_mao/or_port.vhd
+source_file = 1, C:/hadware_mao/Waveform4.vwf
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/hadware_mao/db/or_port.cbx.xml
+design_name = or_port
+instance = comp, \s~output , s~output, or_port, 1
+instance = comp, \a~input , a~input, or_port, 1
+instance = comp, \b~input , b~input, or_port, 1
+instance = comp, \s~0 , s~0, or_port, 1
