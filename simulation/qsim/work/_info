@@ -367,3 +367,84 @@ r1
 !i113 1
 R16
 R26
+vport_xor
+Z57 !s110 1770056668
+!i10b 1
+!s100 nFLf6_o19W;_a5;1B0:k;1
+I?P=b9<W_^S]]NG_aIz9Lh2
+R23
+R0
+w1770056667
+8port_xor.vo
+Fport_xor.vo
+R28
+R25
+r1
+!s85 0
+31
+Z58 !s108 1770056668.000000
+!s107 port_xor.vo|
+!s90 -work|work|port_xor.vo|
+!i113 1
+R16
+R26
+Eport_xor_vhd_vec_tst
+Z59 w1770056647
+R6
+R7
+R0
+Z60 8Waveform6.vwf.vht
+Z61 FWaveform6.vwf.vht
+l0
+L31
+V`84KQT2H8e5iAofJliZ9a1
+!s100 VLm?;^@>U;k]^0i6F]i[E0
+R11
+32
+Z62 !s110 1770056651
+!i10b 1
+Z63 !s108 1770056651.000000
+Z64 !s90 -work|work|Waveform6.vwf.vht|
+Z65 !s107 Waveform6.vwf.vht|
+!i113 1
+R16
+R17
+Aport_xor_arch
+R6
+R7
+DEx4 work 20 port_xor_vhd_vec_tst 0 22 `84KQT2H8e5iAofJliZ9a1
+l50
+L33
+VLgI@EO8zFVVaaf_B5hU>c3
+!s100 L]X6RL99P;E[=Nj^cB0`b0
+R11
+32
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R16
+R17
+vport_xor_vlg_vec_tst
+R57
+!i10b 1
+!s100 Y9h6n33>9SCXbI2UO=`Uc0
+IY=blQck`BLKOfP6lSPZ@B1
+R23
+R0
+w1770056665
+8Waveform6.vwf.vt
+FWaveform6.vwf.vt
+R24
+R25
+r1
+!s85 0
+31
+R58
+!s107 Waveform6.vwf.vt|
+!s90 -work|work|Waveform6.vwf.vt|
+!i113 1
+R16
+R26
