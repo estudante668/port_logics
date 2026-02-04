@@ -1,0 +1,9 @@
+|meio_somador
+a => Somatorio.IN0
+a => Carry.IN0
+b => Somatorio.IN1
+b => Carry.IN1
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Somatorio <= Somatorio.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+entity somador_completo is
+port(
+a, b, Cin : in bit;
+Carry,Somatorio    : out bit
+);
+end somador_completo;
+architecture main of somador_completo is
+begin
+Somatorio <= ( a xor b xor Cin);
+Carry <= a and b and Cin;
+end; 

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/02/2026 15:24:27"
+// DATE "02/02/2026 16:35:36"
 
 // 
 // Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -31,13 +31,9 @@
 module port_xor (
 	a,
 	b,
-	c,
-	d,
 	s);
 input 	a;
 input 	b;
-input 	c;
-input 	d;
 output 	s;
 
 wire gnd;
@@ -54,13 +50,11 @@ tri1 devoe;
 wire \s~output_o ;
 wire \a~input_o ;
 wire \b~input_o ;
-wire \c~input_o ;
-wire \d~input_o ;
 wire \s~0_combout ;
 
 
 cyclonev_io_obuf \s~output (
-	.i(\s~0_combout ),
+	.i(!\s~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -94,34 +88,14 @@ defparam \b~input .bus_hold = "false";
 defparam \b~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cyclonev_io_ibuf \c~input (
-	.i(c),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\c~input_o ));
-// synopsys translate_off
-defparam \c~input .bus_hold = "false";
-defparam \c~input .simulate_z_as = "z";
-// synopsys translate_on
-
-cyclonev_io_ibuf \d~input (
-	.i(d),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\d~input_o ));
-// synopsys translate_off
-defparam \d~input .bus_hold = "false";
-defparam \d~input .simulate_z_as = "z";
-// synopsys translate_on
-
 cyclonev_lcell_comb \s~0 (
 // Equation(s):
-// \s~0_combout  = !\a~input_o  $ (!\b~input_o  $ (!\c~input_o  $ (!\d~input_o )))
+// \s~0_combout  = !\a~input_o  $ (!\b~input_o )
 
 	.dataa(!\a~input_o ),
 	.datab(!\b~input_o ),
-	.datac(!\c~input_o ),
-	.datad(!\d~input_o ),
+	.datac(gnd),
+	.datad(gnd),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -133,7 +107,7 @@ cyclonev_lcell_comb \s~0 (
 	.shareout());
 // synopsys translate_off
 defparam \s~0 .extended_lut = "off";
-defparam \s~0 .lut_mask = 64'h6996699669966996;
+defparam \s~0 .lut_mask = 64'h6666666666666666;
 defparam \s~0 .shared_arith = "off";
 // synopsys translate_on
 

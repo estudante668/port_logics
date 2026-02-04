@@ -1,0 +1,173 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "02/03/2026 18:50:51"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module somador_completo (
+	a,
+	b,
+	Cin,
+	Somatorio,
+	Cout);
+input 	a;
+input 	b;
+input 	Cin;
+output 	Somatorio;
+output 	Cout;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \Somatorio~output_o ;
+wire \Cout~output_o ;
+wire \a~input_o ;
+wire \b~input_o ;
+wire \Cin~input_o ;
+wire \Somatorio~0_combout ;
+wire \Cout~0_combout ;
+
+
+cyclonev_io_obuf \Somatorio~output (
+	.i(\Somatorio~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Somatorio~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Somatorio~output .bus_hold = "false";
+defparam \Somatorio~output .open_drain_output = "false";
+defparam \Somatorio~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \Cout~output (
+	.i(\Cout~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Cout~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Cout~output .bus_hold = "false";
+defparam \Cout~output .open_drain_output = "false";
+defparam \Cout~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \a~input (
+	.i(a),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\a~input_o ));
+// synopsys translate_off
+defparam \a~input .bus_hold = "false";
+defparam \a~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \b~input (
+	.i(b),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\b~input_o ));
+// synopsys translate_off
+defparam \b~input .bus_hold = "false";
+defparam \b~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \Cin~input (
+	.i(Cin),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\Cin~input_o ));
+// synopsys translate_off
+defparam \Cin~input .bus_hold = "false";
+defparam \Cin~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \Somatorio~0 (
+// Equation(s):
+// \Somatorio~0_combout  = !\a~input_o  $ (!\b~input_o  $ (\Cin~input_o ))
+
+	.dataa(!\a~input_o ),
+	.datab(!\b~input_o ),
+	.datac(!\Cin~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Somatorio~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Somatorio~0 .extended_lut = "off";
+defparam \Somatorio~0 .lut_mask = 64'h6969696969696969;
+defparam \Somatorio~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \Cout~0 (
+// Equation(s):
+// \Cout~0_combout  = (!\a~input_o  & (\b~input_o  & \Cin~input_o )) # (\a~input_o  & ((\Cin~input_o ) # (\b~input_o )))
+
+	.dataa(!\a~input_o ),
+	.datab(!\b~input_o ),
+	.datac(!\Cin~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Cout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Cout~0 .extended_lut = "off";
+defparam \Cout~0 .lut_mask = 64'h1717171717171717;
+defparam \Cout~0 .shared_arith = "off";
+// synopsys translate_on
+
+assign Somatorio = \Somatorio~output_o ;
+
+assign Cout = \Cout~output_o ;
+
+endmodule

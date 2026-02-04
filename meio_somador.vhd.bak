@@ -1,0 +1,11 @@
+entity meio_somador is
+port(
+a, b : in bit;
+Cout,Somatorio    : out bit
+);
+end meio_somador;
+architecture main of meio_somador is
+begin
+Somatorio <= (not a and not b) or (a and b);
+Cout <= a and b;
+end; 

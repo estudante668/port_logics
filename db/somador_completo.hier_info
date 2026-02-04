@@ -1,0 +1,11 @@
+|somador_completo
+a => Somatorio.IN0
+a => Cout.IN0
+b => Somatorio.IN1
+b => Cout.IN1
+Cin => Somatorio.IN1
+Cin => Cout.IN1
+Somatorio <= Somatorio.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

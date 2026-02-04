@@ -1,33 +1,34 @@
-# do port_xor.do
+# do MUX.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:24:28 on Feb 02,2026
-# vlog -work work port_xor.vo 
-# -- Compiling module port_xor
-# ** Warning: port_xor.vo(31): (vlog-13233) Design unit "port_xor" already exists and will be overwritten. Overwriting a VHDL entity with a Verilog module.
+# Start time: 07:23:32 on Feb 04,2026
+# vlog -work work mux.vo 
+# -- Compiling module mux
 # 
 # Top level modules:
-# 	port_xor
-# End time: 15:24:28 on Feb 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:24:28 on Feb 02,2026
-# vlog -work work Waveform6.vwf.vt 
-# -- Compiling module port_xor_vlg_vec_tst
-# 
-# Top level modules:
-# 	port_xor_vlg_vec_tst
-# End time: 15:24:28 on Feb 02,2026, Elapsed time: 0:00:00
+# 	mux
+# End time: 07:23:32 on Feb 04,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.port_xor_vlg_vec_tst 
-# Start time: 15:24:28 on Feb 02,2026
-# Loading work.port_xor_vlg_vec_tst
-# Loading work.port_xor
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 07:23:32 on Feb 04,2026
+# vlog -work work Waveform19.vwf.vt 
+# -- Compiling module mux_vlg_vec_tst
+# 
+# Top level modules:
+# 	mux_vlg_vec_tst
+# End time: 07:23:32 on Feb 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux_vlg_vec_tst 
+# Start time: 07:23:32 on Feb 04,2026
+# Loading work.mux_vlg_vec_tst
+# Loading work.mux
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_lcell_comb
-# after#26
-# ** Note: $finish    : Waveform6.vwf.vt(50)
-#    Time: 1 us  Iteration: 0  Instance: /port_xor_vlg_vec_tst
-# End time: 15:24:29 on Feb 02,2026, Elapsed time: 0:00:01
+# after#25
+# ** Note: $stop    : Waveform19.vwf.vt(54)
+#    Time: 1 us  Iteration: 0  Instance: /mux_vlg_vec_tst
+# Break in Module mux_vlg_vec_tst at Waveform19.vwf.vt line 54
+# Stopped at Waveform19.vwf.vt line 54
+# End time: 07:23:33 on Feb 04,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

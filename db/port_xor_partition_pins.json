@@ -14,14 +14,6 @@
 				{
 					"name" : "b",
 					"strict" : false
-				},
-				{
-					"name" : "c",
-					"strict" : false
-				},
-				{
-					"name" : "d",
-					"strict" : false
 				}
 			]
 		}

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Feb 02 15:20:39 2026
+Analysis & Synthesis Status : Successful - Mon Feb 02 16:33:33 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : port_xor
 Top-level Entity Name : port_xor
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 5
+Total pins : 3
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

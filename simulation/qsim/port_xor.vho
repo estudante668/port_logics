@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "02/02/2026 15:24:09"
+-- DATE "02/02/2026 16:35:11"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -39,8 +39,6 @@ ENTITY 	port_xor IS
     PORT (
 	a : IN std_logic;
 	b : IN std_logic;
-	c : IN std_logic;
-	d : IN std_logic;
 	s : OUT STD.STANDARD.bit
 	);
 END port_xor;
@@ -57,34 +55,26 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_a : std_logic;
 SIGNAL ww_b : std_logic;
-SIGNAL ww_c : std_logic;
-SIGNAL ww_d : std_logic;
 SIGNAL ww_s : std_logic;
 SIGNAL \s~output_o\ : std_logic;
 SIGNAL \a~input_o\ : std_logic;
 SIGNAL \b~input_o\ : std_logic;
-SIGNAL \c~input_o\ : std_logic;
-SIGNAL \d~input_o\ : std_logic;
 SIGNAL \s~0_combout\ : std_logic;
-SIGNAL \ALT_INV_b~input_o\ : std_logic;
+SIGNAL \ALT_INV_s~0_combout\ : std_logic;
 SIGNAL \ALT_INV_a~input_o\ : std_logic;
-SIGNAL \ALT_INV_c~input_o\ : std_logic;
-SIGNAL \ALT_INV_d~input_o\ : std_logic;
+SIGNAL \ALT_INV_b~input_o\ : std_logic;
 
 BEGIN
 
 ww_a <= a;
 ww_b <= b;
-ww_c <= c;
-ww_d <= d;
 s <= IEEE.STD_LOGIC_1164.TO_BIT(ww_s);
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_b~input_o\ <= NOT \b~input_o\;
+\ALT_INV_s~0_combout\ <= NOT \s~0_combout\;
 \ALT_INV_a~input_o\ <= NOT \a~input_o\;
-\ALT_INV_c~input_o\ <= NOT \c~input_o\;
-\ALT_INV_d~input_o\ <= NOT \d~input_o\;
+\ALT_INV_b~input_o\ <= NOT \b~input_o\;
 
 \s~output\ : cyclonev_io_obuf
 -- pragma translate_off
@@ -94,7 +84,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \s~0_combout\,
+	i => \ALT_INV_s~0_combout\,
 	devoe => ww_devoe,
 	o => \s~output_o\);
 
@@ -118,41 +108,19 @@ PORT MAP (
 	i => ww_b,
 	o => \b~input_o\);
 
-\c~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_c,
-	o => \c~input_o\);
-
-\d~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_d,
-	o => \d~input_o\);
-
 \s~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \s~0_combout\ = !\a~input_o\ $ (!\b~input_o\ $ (!\c~input_o\ $ (!\d~input_o\)))
+-- \s~0_combout\ = !\a~input_o\ $ (!\b~input_o\)
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0110100110010110011010011001011001101001100101100110100110010110",
+	lut_mask => "0110011001100110011001100110011001100110011001100110011001100110",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ALT_INV_a~input_o\,
 	datab => \ALT_INV_b~input_o\,
-	datac => \ALT_INV_c~input_o\,
-	datad => \ALT_INV_d~input_o\,
 	combout => \s~0_combout\);
 
 ww_s <= \s~output_o\;
